@@ -4,9 +4,13 @@
     "version": "1.0",
     "description": "Calendar that provides various functionalities to the user",
     "action": {
+        "default_popup": "popup.html",
         "default_icon": "icon.png",
-        "default_popup": "popup.html"
-    },
-    "permissions": ["tabs"],
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+        "default_title": "Smart Calendar"
+    }, 
+    "permissions": ["activeTab"],
+
+    "background": {
+        "server_worker": "background.js"
+    }
 }
