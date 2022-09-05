@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Smart Calendar",
+    "version": "1.0",
+    "description": "Calendar that provides various functionalities to the user",
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["tabs"]
+}
