@@ -34,7 +34,7 @@ body{
     width: 100%;
     height: 100%;
     background: rgba(255,255,255,1);
-   box-shadow: 3px 12px 5px rgba(2,2,2,0.16);
+    box-shadow: 3px 12px 5px rgba(2,2,2,0.16);
     z-index: 2;
     overflow: hidden;
     transform: scale(0.9) translate(30px,30px);
@@ -141,19 +141,19 @@ body{
     }
   }
   input.add-event-edit::-webkit-input-placeholder {
-     color: #fff;
+    color: #fff;
   }
   
   input.add-event-edit:-moz-placeholder { /* Firefox 18- */
-     color: #fff;  
+    color: #fff;  
   }
   
   input.add-event-edit::-moz-placeholder {  /* Firefox 19+ */
-     color: #fff;  
+    color: #fff;  
   }
   
   input.add-event-edit:-ms-input-placeholder {  
-     color: #fff;  
+    color: #fff;  
   }
   .event-btn{
     padding: 3px 8px;
@@ -168,7 +168,7 @@ body{
   
   .event-btn--save{
     border-color: #fff;
-     background: #74c500;
+    background: #74c500;
     color: #fff;
     border-color: transparent;
   }

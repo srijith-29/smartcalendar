@@ -15,7 +15,7 @@ function CalendarApp(date) {
       startTime: new Date(2016, 4, 30, 21),
       day: new Date(2016, 4, 30).toString()
     },
-     {
+    {
       name: 'My Birthday!',
       endTime: new Date(2016, 4, 1, 23, 59),
       startTime: new Date(2016, 4, 1, 0),
@@ -38,7 +38,6 @@ function CalendarApp(date) {
   this.calendarMonthNextDiv = document.getElementById("calendar-month-next");
   
   this.dayInspirationalQuote = document.getElementById("inspirational-quote");
-   
   this.todayIsSpan = document.getElementById("footer-date");
   this.dayViewEle = document.getElementById("day-view");
   this.dayViewExitEle = document.getElementById("day-view-exit");
@@ -94,7 +93,7 @@ CalendarApp.prototype.showView = function(date){
   var startingD = new Date(y, m, 1).getDay();
   var lastM = new Date(y, now.getMonth()-1, 1);
   var nextM = new Date(y, now.getMonth()+1, 1);
- 
+
   this.calendarMonthDiv.classList.remove("cview__month-activate");
   this.calendarMonthDiv.classList.add("cview__month-reset");
   
@@ -109,7 +108,6 @@ CalendarApp.prototype.showView = function(date){
   }
   
   for ( var z = 1; z <= lastDayOfM; z++ ) {
-   
     var _date = new Date(y, m ,z);
     var day = document.createElement("div");
     day.className = "cview--date";
@@ -171,8 +169,8 @@ CalendarApp.prototype.openDayWindow = function(date){
     _dayTopbarText = "had ";
     this.addDayEventEle.style.display = "none";
   } else {
-     _dayTopbarText = "have ";
-     this.addDayEventEle.style.display = "inline";
+    _dayTopbarText = "have ";
+    this.addDayEventEle.style.display = "inline";
   }
   this.addDayEventEle.setAttribute("data-date", day);
   
@@ -239,7 +237,7 @@ CalendarApp.prototype.deleteEvent = function(e) {
   if ( anyDatesLeft === false ) {
     var idx = this.aptDates.indexOf(deletedDate.toString());
     if (idx >= 0) {
-       this.aptDates.splice(idx,1);
+      this.aptDates.splice(idx,1);
       var ele = document.querySelector('.cview--date[data-date="'+ deletedDate.toString() +'"]');
       if ( ele ) {
         ele.classList.remove("has-events");
@@ -373,7 +371,7 @@ CalendarApp.prototype.validateAddEventInput = function() {
     this.dayEventAddForm.nameEvent.classList.add("add-event-edit--error");
     this.dayEventAddForm.nameEvent.focus();
   } else {
-     this.dayEventAddForm.nameEvent.classList.remove("add-event-edit--error");
+    this.dayEventAddForm.nameEvent.classList.remove("add-event-edit--error");
   }
   
   return _errors;
@@ -405,11 +403,10 @@ CalendarApp.prototype.textOptionLimiter = function(options, input, format){
   if ( !input ) return '';
   
   if ( input.indexOf(":") !== -1 && format == 'datetime' ) {
- 
+
     var _splitTime = input.split(':', 2);
     if (_splitTime.length == 2 && !_splitTime[1].trim()) return input;
     var _trailingTime = parseInt(_splitTime[1]);
-    /* Probably could be coded better -- a block to clean up trailing data */
     if (options.indexOf(_splitTime[0]) === -1) {
       return options[0];
     }
