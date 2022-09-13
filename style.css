@@ -300,6 +300,7 @@ body{
     font-family: 'Avenir', sans-serif;
     padding-bottom: 20px;
     color: #222;
+    /* color: rgba(255,255,255,0.8); */
     text-transform: uppercase;
     display: flex;
     flex-wrap: nowrap;
@@ -311,6 +312,7 @@ body{
     text-align: center;
     font-size: 16px;
     cursor: pointer;
+    /* color: rgba(255,255,255,0.8); */
     color: #222;
   }
   .cview__month-last:hover,.cview__month-next:hover{
@@ -321,6 +323,7 @@ body{
   .cview__month-current{
     font-size: 22px;
     cursor: default;
+    white-space: nowrap;
     animation: popIn 200ms 1 forwards;
     transform: translateY(20px);
     opacity: 0;
