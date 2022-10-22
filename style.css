@@ -56,9 +56,14 @@ body{
     touch-action: manipulation;
   }
 
-  .button-1:hover,
-  .button-1:focus {
+  .button-1:hover {
     background-color: #ffffff33;
+  }
+
+  .button-1:active {
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
   
 
@@ -94,9 +99,14 @@ body{
     touch-action: manipulation;
   }
   
-  .button-2:hover,
-  .button-2:focus {
+  .button-2:hover {
     background-color: #ffffff33;
+  }
+
+  .button-2:active {
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
 
   .button-3 {
@@ -129,9 +139,14 @@ body{
     touch-action: manipulation;
   }
   
-  .button-3:hover,
-  .button-3:focus {
+  .button-3:hover {
     background-color: #ffffff33;
+  }
+
+  .button-3:active {
+    background-color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
 
 #outer
