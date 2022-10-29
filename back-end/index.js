@@ -1,14 +1,16 @@
-const express = require("express");
-const app = express();
-const port = 3000;
-const cors = require("cors");
+const express = require('express')
+const cors = require('cors')
+// const mysql = require('mysql')
+const app = express()
+app.use(express.json())
+app.use(cors())
 
-app.use(cors());
+const route = require('./routes/router.js')
+const res = require("express/lib/response");
 
-app.get("/",(req,res)=>{
-    res.send("Hello World");
-});
+app.use('/api', route)
+app.get("/",(req,res)=>res.send("Smart Calendar"))
 
-app.listen(port,()=>{
-    console.log(`Server is running on port : ${port}`);
-})
+const port = process.env.port || 3030
+
+app.listen(port,()=>{console.log("Server running on port 3030")})
