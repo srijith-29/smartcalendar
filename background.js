@@ -1,3 +1,5 @@
+
+
 function CalendarApp(date) {
   
   if (!(date instanceof Date)) {
@@ -44,6 +46,10 @@ function CalendarApp(date) {
   this.dayViewDateEle = document.getElementById("day-view-date");
   this.addDayEventEle = document.getElementById("add-event");
   this.dayEventsEle = document.getElementById("day-events");
+
+  this.call = document.getElementById("call");
+  this.todo = document.getElementById("todo");
+  this.task = document.getElementById("task");
   
   this.dayEventAddForm = {
     cancelBtn: document.getElementById("add-event-cancel"),
@@ -272,6 +278,7 @@ CalendarApp.prototype.closeDayWindow = function(){
   this.dayViewEle.classList.remove("calendar--day-view-active");
   this.closeNewEventBox();
 };
+
 CalendarApp.prototype.mainCalendarClickClose = function(e){
   if ( e.currentTarget != e.target ) {
     return;
@@ -469,6 +476,11 @@ CalendarApp.prototype.showNewMonth = function(e){
   this.closeDayWindow();
   return true;
 };
+
+
+function togglePopup() { 
+  document.getElementById("task").classList.toggle("active");
+}
 
 var calendar = new CalendarApp();
 console.log(calendar);

@@ -73,16 +73,22 @@
         </div>
       </div>
       <div id="outer">
-        <div class="inner"><button class="button-1" role="button" style="margin-right:18px">Call </button></div>
-        <div class="inner"><button class="button-2" role="button" style="margin-right:18px">To-Do List</button></div>
-        <div class="inner"><button class="button-3" role="button">Add Task</button></div>
+        <div class="inner"><button class="button-1" role="button" style="margin-right:18px" id="call">Call </button></div>
+        <div class="inner"><button class="button-2" role="button" style="margin-right:18px" id="todo">To-Do List</button></div>
+        <div class="inner"><button class="button-3" role="button" onclick="togglePopup()">Add Task</button></div>
+
+        <div class="popup" id="task">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h1>Title</h1>
+            <p>Hello</p>
+        </div> 
+
       <div class="footer">
         <span><span id="footer-date" class="footer__link">Today is May 30</span></span>    
       </div>
-      
       </div>
-
-      
     </div>
     
     
