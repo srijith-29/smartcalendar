@@ -8,6 +8,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
+
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
@@ -27,6 +28,11 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 // Create a new list item when clicking on the "Add" button
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelector('.addBtn').addEventListener('click', newElement);
+  // anything else you want to initialize on the page
+});
+
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
