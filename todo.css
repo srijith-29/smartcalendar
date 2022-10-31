@@ -1,11 +1,32 @@
 * {
     box-sizing: border-box;
   }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'HelveticaNeue-Light', Helvetica Neue, Helvetica;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    height: 100vh;
+    min-height: 500px;
+    min-width: 400px;
+    max-width: 100%;
+    position: relative;
+    background: #4899c6; 
+}
   
   /* Remove margins and padding from the list */
   ul {
-    margin: 0;
+    margin: 10;
     padding: 0;
+    /* change width */
+    width: 80%;
+    /* center it */
+    margin: 0 auto;
+    /* need space between input and ul */
+    margin-top: 40px;
   }
   
   /* Style the list items */
@@ -74,6 +95,12 @@
     padding: 30px 40px;
     color: white;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 23px;
   }
   
   /* Clear floats after the header */
