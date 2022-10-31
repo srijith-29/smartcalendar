@@ -479,7 +479,7 @@ CalendarApp.prototype.showNewMonth = function(e){
 
 
 function togglePopup() { 
-  document.getElementById("task").classList.toggle("active");
+  document.getElementById("task1").classList.toggle("active");
 }
 
 var calendar = new CalendarApp();
