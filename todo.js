@@ -27,6 +27,7 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 // Create a new list item when clicking on the "Add" button
+
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
@@ -52,3 +53,4 @@ function newElement() {
     }
   }
 }
+

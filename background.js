@@ -484,4 +484,3 @@ function togglePopup() {
 
 var calendar = new CalendarApp();
 console.log(calendar);
-
